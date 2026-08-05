@@ -1,0 +1,58 @@
+{
+  "version": "example-1",
+  "generated_at": "2026-01-01",
+  "destinations": [
+    "sample-central",
+    "sample-north"
+  ],
+  "dest_labels": {
+    "sample-central": "サンプル中央",
+    "sample-north": "サンプル北口"
+  },
+  "vehicle_types": [
+    "regular",
+    "service-a"
+  ],
+  "vehicle_labels": {
+    "service-a": {
+      "ja": "サンプル特別便",
+      "badge": "A"
+    }
+  },
+  "holidays": [],
+  "holiday_range": [
+    "",
+    ""
+  ],
+  "nav_order": [
+    "sample-central",
+    "sample-north"
+  ],
+  "default_station": "sample-central",
+  "stations": {
+    "sample-central": {
+      "name_ja": "サンプル中央",
+      "line": "sample-line",
+      "directions": [
+        {
+          "id": "up",
+          "label": "サンプル南方面"
+        },
+        {
+          "id": "down",
+          "label": "サンプル北方面"
+        }
+      ]
+    },
+    "sample-north": {
+      "name_ja": "サンプル北口",
+      "line": "sample-line",
+      "directions": [
+        {
+          "id": "up",
+          "label": "サンプル中央方面"
+        }
+      ]
+    }
+  }
+}

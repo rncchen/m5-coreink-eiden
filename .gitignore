@@ -1,0 +1,27 @@
+# PlatformIO
+.pio/
+build/
+
+# Wi-Fi credentials (copy data/wifi.example.json instead)
+data/wifi.json
+include/local_config.h
+
+# User-authored railway data (copy the tracked example files first)
+data/stations.json
+data/tt/*.json
+!data/tt/*.example.json
+
+# Python
+__pycache__/
+.venv/
+*.pyc
+
+# Build objects
+*.o
+
+# Editor / OS / sync artifacts
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+@eaDir/

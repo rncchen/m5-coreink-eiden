@@ -1,0 +1,12 @@
+# M5 Core Ink departure board partition table (4MB flash, no OTA)
+# Rationale: Japanese UI is a hard constraint; M5GFX efontJA bitmap fonts are
+# large. efontJA_24 (signboard-size destinations) pushed the app to 2.39MB,
+# so littlefs is trimmed to its 1.5MB floor (>= 1.5MB global constraint;
+# actual data usage is ~150KB) giving the app 2.4375MB (~52KB headroom).
+# ASCII-only comments: PlatformIO's checkprogsize parser reads this file with
+# the host ANSI codepage (cp950 on this machine) and chokes on non-ASCII bytes.
+# Name,     Type, SubType,  Offset,   Size
+nvs,        data, nvs,      0x9000,   0x6000
+phy_init,   data, phy,      0xf000,   0x1000
+factory,    app,  factory,  0x10000,  0x270000
+spiffs,     data, spiffs,   0x280000, 0x180000
